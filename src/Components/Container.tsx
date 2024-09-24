@@ -6,7 +6,7 @@ interface ContainerProps {
 
 const Container: React.FC<ContainerProps> = ({children}) => {
     return (
-        <div className="h-screen w-full font-roboto">
+        <div className="flex flex-col h-screen w-full font-roboto">
             {children}
         </div>
     )

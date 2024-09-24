@@ -1,12 +1,11 @@
-import Container from "../Components/Container"
-import Navbar from "../Components/Navbar"
+import React from "react"
+import Layout from "../Layout/Layout"
 
-const Index = () => {
+const Index: React.FC = () => {
     return (
-        <Container>
-            <Navbar />
+        <Layout>
             <h1 className="text-center text-4xl mt-4 font-bold text-red-600">If you visit this website, you will see a deployed Kubernetes.</h1>
-        </Container>
+        </Layout>
     )
 }
 

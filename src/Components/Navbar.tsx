@@ -1,15 +1,16 @@
 import NavbarItem from "../Fragments/NavbarItem"
 import UnlistedList from "../Elements/UnlistedList";
+import React from "react";
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
     return (
-        <nav className="bg-gray-900 text-gray-100 h-20 justify-around items-center hidden md:flex">
+        <nav className="bg-gray-900 text-yellow-300 h-20 justify-around items-center hidden md:flex">
             <UnlistedList>
                 <NavbarItem url="https://www.linkedin.com/in/bernard-bereness-514259251/" pageName="Bernard Bereness | Software Engineer" />
             </UnlistedList>
             <UnlistedList>
                 <NavbarItem url="/" pageName="Home" />
-                <NavbarItem url="/about-us" pageName="About Us" />
+                <NavbarItem url="/about-me" pageName="About Me" />
                 <NavbarItem url="/experience" pageName="Experience" />
             </UnlistedList>
             <UnlistedList>
