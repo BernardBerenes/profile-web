@@ -1,10 +1,11 @@
 import React from "react"
 import Layout from "../Layout/Layout"
+import MaintenancePage from "../Components/Maintenance"
 
 const Experience: React.FC = () => {
     return (
         <Layout>
-            <h1>TETAW</h1>
+            <MaintenancePage />
         </Layout>
     )
 }

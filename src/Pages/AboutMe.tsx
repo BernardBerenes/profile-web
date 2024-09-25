@@ -1,10 +1,11 @@
 import React from "react"
 import Layout from "../Layout/Layout"
+import MaintenancePage from "../Components/Maintenance"
 
 const AboutMe: React.FC = () => {
     return (
         <Layout>
-            <h1>About Me</h1>
+            <MaintenancePage />
         </Layout>
     )
 }
