@@ -4,7 +4,7 @@ import React from "react";
 
 const Navbar: React.FC = () => {
     return (
-        <nav className="bg-gray-900 text-yellow-300 h-20 justify-around items-center hidden md:flex">
+        <nav className="bg-gray-800 text-gray-100 h-20 justify-around items-center hidden md:flex">
             <UnlistedList>
                 <NavbarItem url="https://www.linkedin.com/in/bernard-bereness-514259251/" pageName="Bernard Bereness | Software Engineer" />
             </UnlistedList>

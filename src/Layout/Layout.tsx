@@ -11,7 +11,7 @@ const Layout: React.FC<LayoutProps> = ({children}) => {
     return (
         <Container>
             <Navbar />
-                <main className="flex-grow">{children}</main>
+                <main className="flex-grow bg-gray-900">{children}</main>
             <Footer />
         </Container>
     )

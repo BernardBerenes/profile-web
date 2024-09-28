@@ -20,7 +20,7 @@ const NavbarItem: React.FC<NavbarItemProps> = (props) => {
     }, [])
 
     return (
-        <li className={`${isAnimated ? "hover:animate-heartbeat" : "animate-slideInFromLeft"} hover:text-orange-400 hover:shadow-lg`}>
+        <li className={`${isAnimated ? "hover:animate-heartbeat" : "animate-slideInFromLeft"} hover:text-cyan-400 hover:shadow-lg`}>
             <Link to={url}>{ pageName }</Link>
         </li>
     )

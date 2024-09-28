@@ -5,6 +5,7 @@ import Index from './Pages/Index.tsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Experience from './Pages/Experience.tsx'
 import AboutMe from './Pages/AboutMe.tsx'
+import Test from './Components/Loading.tsx'
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
   {
     path: "/about-me",
     element: <AboutMe />
+  },
+  {
+    path: "/test",
+    element: <Test />
   }
 ])
 

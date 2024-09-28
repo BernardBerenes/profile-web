@@ -9,8 +9,8 @@ interface FooterIconProps {
 const FooterIcon: React.FC<FooterIconProps> = (props) => {
     const { url, path } = props
     return (
-        <Link to={url} className="text-gray-400 hover:text-teal-400 hover:animate-heartbeat">
-            <img src={`/assets/icons/${path}.svg`} alt={`${ path } icon`} className="h-6 w-6" />
+        <Link to={url} className="hover:animate-heartbeat w-max">
+            <img src={`../src/assets/icons/${path}.svg`} alt={`${ path } icon`} className="h-6 w-6" />
         </Link>
     )
 }
