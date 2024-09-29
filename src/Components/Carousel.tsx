@@ -3,7 +3,9 @@ import FooterIcon from '../Fragments/FooterIcon';
 
 const Carousel: React.FC = () => {
     const [index, setIndex] = useState(0);
-    const prefixPath = "../src/assets/images/"
+    const [visibleCards, setVisibleCards] = useState(5); // Dinamis berdasarkan lebar layar
+    const prefixPath = "../src/assets/images/";
+
     const cards = [
         {
             title: "Cinemalix",
@@ -34,41 +36,72 @@ const Carousel: React.FC = () => {
             description: "React Calculator is a calculator developed using React. It was created to fulfill an IT Division assignment.",
             imgSrc: `${prefixPath}project-5.png`,
             url: "https://github.com/BernardBerenes/calculator-app"
+        },
+        {
+            title: "ERamen Shop",
+            description: "ERamen Shops is a website used for marketing a ramen shop, with the hope that it can expand the restaurant's connections.",
+            imgSrc: `${prefixPath}project-6.png`,
+            url: "https://github.com/BernardBerenes/ERamen-Shops"
         }
     ];
-    const maxVisibleCards = 4;
-    const totalCards = cards.length;
 
-    const moveToNextCard = () => {
-        setIndex((prevIndex) => (prevIndex + 1) % Math.max(1, totalCards - maxVisibleCards + 1));
+    const totalCards = cards.length;
+    const updateVisibleCards = () => {
+        const width = window.innerWidth;
+        if (width >= 1280) {
+            setVisibleCards(5);
+        } else if (width >= 1024) {
+            setVisibleCards(4);
+        } else if (width >= 768) {
+            setVisibleCards(3);
+        } else if (width >= 600) {
+            setVisibleCards(2);
+        } else {
+            setVisibleCards(1);
+        }
     };
 
     useEffect(() => {
-        const interval = setInterval(moveToNextCard, 4500);
-        return () => clearInterval(interval);
-    }, []); // eslint-disable-line react-hooks/exhaustive-deps
+        const moveToNextCard = () => {
+            setIndex((prevIndex) => (prevIndex + 1) % (totalCards - visibleCards + 1));
+        };
+
+        updateVisibleCards();
+        
+        window.addEventListener('resize', updateVisibleCards);
+
+        const interval = setInterval(moveToNextCard, 2000);
+
+        return () => {
+            window.removeEventListener('resize', updateVisibleCards);
+            clearInterval(interval);
+        };
+    }, [totalCards, visibleCards]);
 
     return (
-        <div className="relative overflow-hidden w-full max-w-5xl mx-auto">
-            <div className="flex transition-transform duration-500" style={{ transform: `translateX(-${(index * 100) / maxVisibleCards}%)` }}>
-                {cards.map((card, idx) => (
-                    <div key={idx} className="flex-shrink-0 w-1/4 h-full flex justify-center items-center p-2">
-                        <div className="card bg-base-100 w-80 h-96 shadow-xl flex flex-col">
-                            <figure className="w-full h-3/4flex justify-center items-center overflow-hidden">
-                                <img className="w-full h-full object-cover" src={card.imgSrc} alt={card.title}/>
-                            </figure>
-                            <div className="p-4 flex-grow flex flex-col justify-between">
-                                <div>
-                                    <h2 className="card-title">{card.title}</h2>
-                                    <p className="text-justify">{card.description}</p>
-                                </div>
-                                <div className="card-actions justify-end">
-                                    <FooterIcon url={card.url} path="github" />
+        <div className="relative w-full max-w-7xl mx-auto">
+            <h1 className="text-3xl font-bold text-gray-50 ml-4 mb-4 text-center md:text-left">Projects</h1>
+            <div className="relative overflow-hidden">
+                <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${(index * 100) / visibleCards}%)` }}>
+                    {cards.map((card, idx) => (
+                        <div key={idx} className="flex-shrink-0 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 h-full flex justify-center items-center p-4">
+                            <div className="card w-72 h-96 shadow-xl rounded-xl overflow-hidden transform hover:scale-105 transition-all duration-300 ease-out">
+                                <figure className="w-full h-40 flex justify-center items-center overflow-hidden">
+                                    <img className="w-full h-full object-cover rounded-t-xl" src={card.imgSrc} alt={card.title} />
+                                </figure>
+                                <div className="p-4 flex-grow flex flex-col justify-between bg-gray-700 text-gray-50 rounded-b-xl">
+                                    <div>
+                                        <h2 className="card-title text-lg font-semibold">{card.title}</h2>
+                                        <p className="text-sm text-justify">{card.description}</p>
+                                    </div>
+                                    <div className="card-actions justify-end">
+                                        <FooterIcon url={card.url} path="github" />
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
         </div>
     );

@@ -6,7 +6,7 @@ interface UnlistedProps {
 
 const UnlistedList: React.FC<UnlistedProps> = ({children}) => {
     return (
-        <ul className="list-none flex gap-16 text-xl">
+        <ul className="list-none flex lg:gap-16 text-xl flex-col lg:flex-row">
             {children}
         </ul>
     )

@@ -11,7 +11,7 @@ const Container: React.FC<ContainerProps> = ({children}) => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setIsLoading(false)
-        }, 2250)
+        }, 0)
         
         return () => clearTimeout(timer)
     }, [])
