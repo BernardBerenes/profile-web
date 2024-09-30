@@ -3,8 +3,8 @@ import FooterIcon from '../Fragments/FooterIcon';
 
 const Carousel: React.FC = () => {
     const [index, setIndex] = useState(0);
-    const [visibleCards, setVisibleCards] = useState(5); // Dinamis berdasarkan lebar layar
-    const prefixPath = "../src/assets/images/";
+    const [visibleCards, setVisibleCards] = useState(5);
+    const prefixPath = "src/assets/images/";
 
     const cards = [
         {
@@ -70,7 +70,7 @@ const Carousel: React.FC = () => {
         
         window.addEventListener('resize', updateVisibleCards);
 
-        const interval = setInterval(moveToNextCard, 2000);
+        const interval = setInterval(moveToNextCard, 3500);
 
         return () => {
             window.removeEventListener('resize', updateVisibleCards);
@@ -80,7 +80,7 @@ const Carousel: React.FC = () => {
 
     return (
         <div className="relative w-full max-w-7xl mx-auto">
-            <h1 className="text-3xl font-bold text-gray-50 ml-4 mb-4 text-center md:text-left">Projects</h1>
+            <h1 className="font-bold text-gray-50 ml-4 mt-4 text-center text-lg md:text-left sm:text-3xl ">Projects</h1>
             <div className="relative overflow-hidden">
                 <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${(index * 100) / visibleCards}%)` }}>
                     {cards.map((card, idx) => (

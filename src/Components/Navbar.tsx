@@ -1,7 +1,7 @@
 import NavbarItem from "../Fragments/NavbarItem";
 import UnlistedList from "../Elements/UnlistedList";
 import React, { useState } from "react";
-import Hamburger from "./Hamburger"; // Import the Hamburger component
+import Hamburger from "./Hamburger";
 
 const Navbar: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -34,9 +34,9 @@ const Navbar: React.FC = () => {
                 <div className={`top-20 absolute z-40 h-full w-1/2 sm:w-72 bg-gray-800 lg:hidden`}>
                     <UnlistedList>
                         <h1 className="text-2xl text-center my-4">Bernard Bereness</h1>
-                        <NavbarItem url="/" pageName="Home" icon="../src/assets/icons/home.svg" />
-                        <NavbarItem url="/about-me" pageName="About Me" icon="../src/assets/icons/about-me.svg" />
-                        <NavbarItem url="/experience" pageName="Experience" icon="../src/assets/icons/experience.svg" />
+                        <NavbarItem url="/" pageName="Home" icon="src/assets/icons/home.svg" />
+                        <NavbarItem url="/about-me" pageName="About Me" icon="src/assets/icons/about-me.svg" />
+                        <NavbarItem url="/experience" pageName="Experience" icon="src/assets/icons/experience.svg" />
                     </UnlistedList>
                 </div>
             )}

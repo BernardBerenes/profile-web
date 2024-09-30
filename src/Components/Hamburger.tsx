@@ -1,8 +1,8 @@
 import React from "react";
 
 interface HamburgerProps {
-    toggleMenu: () => void; // Define a prop for the toggleMenu function
-    isOpen: boolean; // Define a prop to determine the menu state
+    toggleMenu: () => void;
+    isOpen: boolean;
 }
 
 const Hamburger: React.FC<HamburgerProps> = ({ toggleMenu, isOpen }) => {

@@ -26,7 +26,7 @@ const NavbarItem: React.FC<NavbarItemProps> = (props) => {
     return (
         <li className={`${isAnimated ? "hover:animate-heartbeat" : "lg:animate-slideInFromLeft"} hover:text-cyan-400 hover:shadow-lg flex p-4 lg:p-0 items-center ${isActive ? "text-cyan-600 font-bold" : ""}`}>
             {icon && (
-                <img src={icon} alt={`Test icon`} className="h-6 mr-4" />
+                <img src={icon} alt={`${pageName} icon`} className="h-6 mr-4" />
             )}
             <Link to={url} className={`text-lg lg:text-lg sm:text-2xl ${isActive ? "text-cyan-400" : ""}`}>{pageName}</Link>
         </li>

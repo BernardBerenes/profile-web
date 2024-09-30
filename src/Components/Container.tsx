@@ -11,13 +11,13 @@ const Container: React.FC<ContainerProps> = ({children}) => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setIsLoading(false)
-        }, 0)
+        }, 1250)
         
         return () => clearTimeout(timer)
     }, [])
 
     return (
-        <div className="flex flex-col h-screen w-full font-roboto">
+        <div className="flex flex-col min-h-screen w-full font-roboto">
             {isLoading ? (
                 <Test />
             ) : (
