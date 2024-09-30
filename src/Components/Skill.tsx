@@ -10,7 +10,17 @@ const Skill: React.FC = () => {
                 <IconCloudDemo />
             </div>
             <div className="text-white flex justify-center mt-4">
-                <ul className="steps">
+                <ul className="steps hidden lg:inline-grid">
+                    <SkillList skillName="HTML" />
+                    <SkillList skillName="CSS" />
+                    <SkillList skillName="JavaScript" />
+                    <SkillList skillName="React" />
+                    <SkillList skillName="Laravel" />
+                    <SkillList skillName="Docker" />
+                    <SkillList skillName="Kubernetes" />
+                    <SkillList skillName="Many More..." />
+                </ul>
+                <ul className="steps steps-vertical block lg:hidden">
                     <SkillList skillName="HTML" />
                     <SkillList skillName="CSS" />
                     <SkillList skillName="JavaScript" />

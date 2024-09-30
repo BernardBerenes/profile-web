@@ -11,7 +11,7 @@ const SkillList: React.FC<SkillListProps> = (props) => {
 
     return (
         <li data-content="" className="step step-info">
-            <img src={`${prefixPath}${url}.svg`} alt="" className="w-1/4" />
+            <img src={`${prefixPath}${url}.svg`} alt="" className="w-1/4 hidden lg:block" />
             <h4 className="text-xl">{ skillName }</h4>
         </li>
     )
