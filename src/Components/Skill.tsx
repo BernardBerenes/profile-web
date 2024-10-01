@@ -1,11 +1,12 @@
 import React from 'react'
 import { IconCloudDemo } from './IconCloudDemo'
-import SkillList from '@/Elements/SkillList'
+import SkillList from '@/Fragments/SkillList'
+import SectionTitle from '@/Elements/SectionTitle'
 
 const Skill: React.FC = () => {
     return (
         <div className="relative w-full max-w-7xl mx-auto mb-10">
-            <h1 className="font-bold text-gray-50 ml-4 mt-4 text-center text-lg md:text-left sm:text-3xl ">Skills</h1>
+            <SectionTitle sectionTitle="Skills" additionalCSS="ms-4 mt-4" />
             <div className="flex justify-center">
                 <IconCloudDemo />
             </div>

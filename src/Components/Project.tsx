@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import FooterIcon from '../Fragments/FooterIcon';
+import SectionTitle from '@/Elements/SectionTitle';
 
 const Carousel: React.FC = () => {
     const [index, setIndex] = useState(0);
@@ -24,14 +25,14 @@ const Carousel: React.FC = () => {
         {
             title: "WearHouse Web",
             description: "WearHouse is an app for storing information about costume or clothing ownership, serving as a storage solution for companies.",
-            techStack: ".NET CORE",
+            techStack: "HTML CSS JS",
             imgSrc: `${prefixPath}project-3.png`,
             url: "https://github.com/BernardBerenes/WearHouse-Web"
         },
         {
             title: "WearHouse API",
             description: "WearHouse is an app for storing information about costume or clothing ownership, serving as a storage solution for companies.",
-            techStack: "HTML CSS JS",
+            techStack: ".NET CORE",
             imgSrc: `${prefixPath}project-4.png`,
             url: "https://github.com/BernardBerenes/WearHouse-API"
         },
@@ -86,7 +87,7 @@ const Carousel: React.FC = () => {
 
     return (
         <div className="relative w-full max-w-7xl mx-auto">
-            <h1 className="font-bold text-gray-50 ml-4 mt-4 text-center text-lg md:text-left sm:text-3xl ">Projects</h1>
+            <SectionTitle sectionTitle="Projects" additionalCSS="ms-4" />
             <div className="relative overflow-hidden">
                 <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${(index * 100) / visibleCards}%)` }}>
                     {cards.map((card, idx) => (
