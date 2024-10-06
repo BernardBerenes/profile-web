@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Experience from './Pages/Experience.tsx'
 import AboutMe from './Pages/AboutMe.tsx'
 import NotFound from './Pages/NotFound.tsx'
+import 'flowbite'
 
 const router = createBrowserRouter([
   {
