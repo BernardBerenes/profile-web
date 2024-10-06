@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import FooterIcon from '../Fragments/FooterIcon';
 import SectionTitle from '@/Elements/SectionTitle';
 
-const Carousel: React.FC = () => {
+const Project: React.FC = () => {
     const [index, setIndex] = useState(0);
     const [visibleCards, setVisibleCards] = useState(5);
     const prefixPath = "src/assets/images/";
@@ -129,4 +129,4 @@ const Carousel: React.FC = () => {
     );
 };
 
-export default Carousel;
+export default Project;

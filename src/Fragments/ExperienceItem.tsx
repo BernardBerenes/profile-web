@@ -21,7 +21,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = (props) => {
             <div className="timeline-start mb-10 md:text-end">
                 <time className="font-mono italic">{ time }</time>
                 <div className="text-lg font-black">{ organization }</div>
-                <ul className={`w-full md:w-2/3 ml-4 md:ml-auto text-justify ${ list ? 'list-disc' : 'list-none'}`}>
+                <ul className={`w-11/12 md:w-2/3 ml-4 md:ml-auto text-justify ${ list ? 'list-disc' : 'list-none'}`}>
                     {description.map((item, index) => (
                         <li key={index}>{item}</li>
                     ))}
