@@ -12,7 +12,7 @@ COPY . .
 
 RUN npm run build
 
-COPY src/assets dist/assets
+COPY src/assets dist/src/assets
 
 EXPOSE 3000
 
