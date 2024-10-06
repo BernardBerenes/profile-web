@@ -9,45 +9,59 @@ const Carousel: React.FC = () => {
 
     const cards = [
         {
+            title: "Redis + Kubernetes + Helm",
+            description: "We implemented a Redis replica within Kubernetes using Helm with automatic pod labeling for the master node that is operating within it.",
+            techStack: "Redis + Kubernetes + Helm",
+            imgSrc: `${prefixPath}project-1.png`,
+            url: "#"
+        },
+        {
+            title: "Kubernetes Application",
+            description: "As the Technology team of the IT Division, we implemented Kubernetes in several Bina Nusantara applications.",
+            techStack: "Kubernetes",
+            imgSrc: `${prefixPath}project-2.png`,
+            url: "#"
+        },
+        {
             title: "Cinemalix",
             description: "Cinemalix is a website designed to help people find tickets. Cinemalix was developed with the goal of making it easier for people to search for tickets.",
             techStack: "Laravel",
-            imgSrc: `${prefixPath}project-1.png`,
+            imgSrc: `${prefixPath}project-3.png`,
             url: "https://github.com/BernardBerenes/Cinemalix"
         },
         {
             title: "Tutoran",
             description: "Tutoran is a website designed to help students find tutoring solutions. Tutoran offers a live Zoom feature, allowing students to engage in live tutoring sessions.",
             techStack: "Laravel",
-            imgSrc: `${prefixPath}project-2.png`,
+            imgSrc: `${prefixPath}project-4.png`,
             url: "https://github.com/BernardBerenes/Tutoran"
         },
         {
             title: "WearHouse Web",
             description: "WearHouse is an app for storing information about costume or clothing ownership, serving as a storage solution for companies.",
             techStack: "HTML CSS JS",
-            imgSrc: `${prefixPath}project-3.png`,
+            imgSrc: `${prefixPath}project-5.png`,
             url: "https://github.com/BernardBerenes/WearHouse-Web"
         },
         {
             title: "WearHouse API",
             description: "WearHouse is an app for storing information about costume or clothing ownership, serving as a storage solution for companies.",
             techStack: ".NET CORE",
-            imgSrc: `${prefixPath}project-4.png`,
+            imgSrc: `${prefixPath}project-6.png`,
             url: "https://github.com/BernardBerenes/WearHouse-API"
         },
         {
             title: "React Calculator",
             description: "React Calculator is a calculator developed using React. It was created to fulfill an IT Division assignment.",
-            techStack: "React JS",
-            imgSrc: `${prefixPath}project-5.png`,
+            techStack: "React TS",
+            imgSrc: `${prefixPath}project-7.png`,
             url: "https://github.com/BernardBerenes/calculator-app"
         },
         {
             title: "ERamen Shop",
             description: "ERamen Shops is a website used for marketing a ramen shop, with the hope that it can expand the restaurant's connections.",
             techStack: "HTML CSS JS",
-            imgSrc: `${prefixPath}project-6.png`,
+            imgSrc: `${prefixPath}project-8.png`,
             url: "https://github.com/BernardBerenes/ERamen-Shops"
         }
     ];

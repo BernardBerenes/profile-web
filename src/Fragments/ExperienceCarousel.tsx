@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 
 const ExperienceCarousel: React.FC = () => {
+    const prefixPath = "src/assets/images/"
     const images = [
-        { src: 'src/assets/images/bncc.png', alt: 'Organization 1' },
-        { src: 'src/assets/images/it-division.png', alt: 'Organization 2' },
-        { src: 'src/assets/images/data-science.png', alt: 'Organization 3' },
+        { src: `${prefixPath}bncc.png`, alt: 'Organization 1' },
+        { src: `${prefixPath}it-division.png`, alt: 'Organization 2' },
+        { src: `${prefixPath}data-science.png`, alt: 'Organization 3' },
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
