@@ -18,7 +18,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = (props) => {
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
                 </svg>
             </div>
-            <div className="timeline-start mb-10 md:text-end">
+            <div className="timeline-start md:text-end">
                 <time className="font-mono italic">{ time }</time>
                 <div className="text-lg font-black">{ organization }</div>
                 <ul className={`w-11/12 md:w-2/3 ml-4 md:ml-auto text-justify ${ list ? 'list-disc' : 'list-none'}`}>
@@ -27,7 +27,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = (props) => {
                     ))}
                 </ul>
             </div>
-            {!last && <hr /> }
+            {!last && <hr className="bg-white" /> }
         </li>
     )
 }
