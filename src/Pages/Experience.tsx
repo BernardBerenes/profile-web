@@ -11,7 +11,7 @@ const Experience: React.FC = () => {
             
             <ExperienceCarousel />
 
-            <h1 className="text-center text-gray-50 font-bold text-2xl sm:text-4xl mt-8">Organizations</h1>
+            <h1 className="text-center text-gray-50 font-bold text-2xl sm:text-4xl">Organizations</h1>
             <ExperienceList jobs={false} />
         </Layout>
     )

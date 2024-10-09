@@ -5,7 +5,7 @@ import SectionTitle from '@/Elements/SectionTitle'
 
 const Skill: React.FC = () => {
     return (
-        <div className="relative w-full max-w-7xl mx-auto mb-10">
+        <div className="relative w-full max-w-7xl mx-auto mb-12">
             <SectionTitle sectionTitle="Skills" additionalCSS="ms-4 mt-4" />
             <div className="flex justify-center">
                 <IconCloudDemo />
