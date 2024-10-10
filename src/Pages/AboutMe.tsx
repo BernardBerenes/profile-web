@@ -1,11 +1,11 @@
 import React from "react"
 import Layout from "../Layout/Layout"
-import MaintenancePage from "../Components/Maintenance"
+import AboutMeDescription from "@/Components/AboutMeDescription"
 
 const AboutMe: React.FC = () => {
     return (
         <Layout>
-            <MaintenancePage />
+            <AboutMeDescription />
         </Layout>
     )
 }

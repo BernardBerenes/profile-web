@@ -22,7 +22,7 @@ const ExperienceList: React.FC<ExperienceListProps> = (props) => {
                             list={false}
                         />
                         <ExperienceItem 
-                            time="March 2023 - March 2024" 
+                            time="March 2023 - February 2024" 
                             organization="Software Engineer at Bina Nusantara IT Division" 
                             description={[ 
                                 "We're implementing new technologies that can be used by the Software Solution Group (SSG) or any other division.",

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import Test from "./Loading"
+import Loading from "./Loading"
 
 interface ContainerProps {
     children: React.ReactNode
@@ -19,9 +19,9 @@ const Container: React.FC<ContainerProps> = ({children}) => {
     return (
         <div className="flex flex-col min-h-screen w-full font-roboto">
             {isLoading ? (
-                <Test />
+                <Loading />
             ) : (
-                children
+                <div className="flex-grow flex flex-col">{children}</div>
             )}
         </div>
     )
