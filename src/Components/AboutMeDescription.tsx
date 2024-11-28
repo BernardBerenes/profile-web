@@ -3,7 +3,7 @@ import Typewriter from 'typewriter-effect';
 
 const AboutMeDescription: React.FC = () => {
     return (
-        <div className="relative flex-grow bg-gray-900 text-white flex items-center justify-center px-8 2xl:px-0">
+        <div className="relative flex-grow bg-gray-900 text-white flex items-center justify-center px-8 2xl:px-0 gap-4">
             <img src="src/assets/images/profile.png" alt="Profile" className="inset-0 object-cover hidden md:block h-96 lg:h-[50.5rem]"/>
             <div className="relative z-10 max-w-4xl">
                 <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold">
