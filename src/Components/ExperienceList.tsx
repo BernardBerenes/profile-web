@@ -22,7 +22,7 @@ const ExperienceList: React.FC<ExperienceListProps> = (props) => {
                             list={false}
                         />
                         <ExperienceItem 
-                            time="March 2023 - February 2024" 
+                            time="March 2023 - Now" 
                             organization="Software Engineer at Bina Nusantara IT Division" 
                             description={[ 
                                 "We're implementing new technologies that can be used by the Software Solution Group (SSG) or any other division.",
@@ -49,11 +49,19 @@ const ExperienceList: React.FC<ExperienceListProps> = (props) => {
                 ) : (
                     <>
                         <ExperienceItem 
+                            time="August 2024 - Now" 
+                            organization="Co-Director at Binus Blockchain and Crypto Club" 
+                            description={[ 
+                                "Provide ideas regarding websites",
+                                "Maintaining and currently developing discord bot for BBCC to post every Blockchain News from Instagram automatically to discord.",
+                            ]}
+                        />
+                        <ExperienceItem 
                             time="April 2023 - November 2023" 
                             organization="Activist at Data Science Club" 
                             description={[ 
                                 "Completing assignments related to data science or data analysis, focusing on statistics and other topics using Python.",
-                                "Designing the Data Science Club website using Figma, focusing on creating an intuitive user experience and visually appealing interface that aligns with the club’s goals,",
+                                "Designing the Data Science Club website using Figma, focusing on creating an intuitive user experience and visually appealing interface that aligns with the club’s goals.",
                                 "Developing the Data Science Club website using React."
                             ]}
                         />
